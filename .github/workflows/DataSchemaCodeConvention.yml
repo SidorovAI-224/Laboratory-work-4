@@ -18,4 +18,4 @@ jobs:
     # виконнання декількох послідовних команд shell-інтерпретатором
     run: |
       npm i -g @prantlf/jsonlint
-      jsonlint $GITHUB_WORKSPACE/JSON_DetailedDataSchema_Example.json
+      jsonlint $GITHUB_WORKSPACE/JSON_DetailedDataSchema_Example_Modified.json
