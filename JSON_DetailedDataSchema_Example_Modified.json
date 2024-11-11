@@ -1,13 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Модель користувача та замовлення",
-  "description": "Модель даних для користувача, замовлень та пов'язаної документації",
-  "type": "object",
-  "properties": {
-    "Користувач": {
-      "description": "Основний клас для користувачів",
-      "type": "object",
-      "properties": {
+  "de: {
         "ПІБ": {
           "description": "як звати",
           "type": "string",
@@ -15,23 +9,21 @@
         },
         "e-mail": {
           "description": "адреса електронної пошти",
-          "type": "string",
-          "format": "email",
+          "type": "st,
           "pattern": ".*@.*"
         },
         "дата реєстрації": {
           "description": "дата, коли користувач створив обліковий запис",
-          "type": "string",
+          "type": "strin
           "format": "date"
         }
       },
-      "required": ["ПІБ", "e-mail", "дата реєстрації"]
+      "required"ПІБ", "e-mail", "дата реєстрації"]
     },
     "Клієнт": {
       "description": "Клієнт, що робить замовлення",
       "type": "object",
-      "allOf": [{"$ref": "#/properties/Користувач"}],
-      "properties": {
+      "allOf"
         "Замовлення": {
           "description": "Список замовлень",
           "type": "array",
@@ -52,16 +44,7 @@
         },
         "Замовлення": {
           "description": "Замовлення для обробки",
-          "type": "array",
-          "items": {"$ref": "#/properties/Замовлення"}
-        }
-      },
-      "required": ["робочий телефон", "Замовлення"]
-    },
-    "Кур'єр": {
-      "description": "Кур'єр, що доставляє замовлення",
-      "type": "object",
-      "allOf": [{"$ref": "#/properties/Користувач"}],
+          "type": #/properties/Користувач"}],
       "properties": {
         "стаж роботи": {
           "description": "час роботи на посаді в роках",
@@ -80,18 +63,12 @@
     "EHSQ експерт": {
       "description": "Експерт, що обробляє документацію",
       "type": "object",
-      "allOf": [{"$ref": "#/properties/Користувач"}],
+      "allO": [{"$ref": "#/properties/Користувач"}],
       "properties": {
         "освіта": {
           "description": "спеціальність та університет випуску",
           "type": "string",
-          "maxLength": 100
-        },
-        "Документація": {
-          "description": "Документи для вибору",
-          "type": "array",
-          "items": {"$ref": "#/properties/Документація"}
-        }
+          "maxLe
       },
       "required": ["освіта", "Документація"]
     },
@@ -99,15 +76,11 @@
       "description": "Інформація про замовлення",
       "type": "object",
       "properties": {
-        "кількість літрів": {
-          "description": "кількість замовлених літрів води",
-          "type": "integer",
-          "minimum": 1
+        "кількі: 1
         },
         "вартість": {
           "description": "вартість замовлення в гривнях",
-          "type": "number",
-          "minimum": 0.1
+          "type"": 0.1
         }
       },
       "required": ["кількість літрів", "вартість"]
@@ -126,7 +99,7 @@
     },
     "Стаття": {
       "description": "Стаття для вибору",
-      "type": "object",
+      "type"ct",
       "properties": {
         "документ": {
           "description": "документ, в якому прописана стаття",
@@ -146,8 +119,7 @@
       "type": "object",
       "properties": {
         "висновок": {
-          "description": "висновок експерта щодо проблеми",
-          "type": "string",
+          "descripring",
           "maxLength": 500
         }
       },
